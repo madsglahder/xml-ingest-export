@@ -3,8 +3,10 @@ package virksom;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
+import randomString.RandomString;
 
 import javax.xml.bind.annotation.XmlValue;
+import java.util.concurrent.ThreadLocalRandom;
 
 @Root(name="form")
 public class Form {
@@ -405,7 +407,7 @@ public class Form {
                 private IndsendtBlanketId indsendtBlanketId;
 
                 @Element(name="document_date")
-                private DocumentDate docuemtnDate;
+                private DocumentDate documentDate;
 
                 @Element(name="document_time")
                 private DocumentTime documentTime;
@@ -482,12 +484,12 @@ public class Form {
                     this.indsendtBlanketId = indsendtBlanketId;
                 }
 
-                public DocumentDate getDocuemtnDate() {
-                    return docuemtnDate;
+                public DocumentDate getDocumentDate() {
+                    return documentDate;
                 }
 
-                public void setDocuemtnDate(DocumentDate docuemtnDate) {
-                    this.docuemtnDate = docuemtnDate;
+                public void setDocumentDate(DocumentDate documentDate) {
+                    this.documentDate = documentDate;
                 }
 
                 public DocumentTime getDocumentTime() {
@@ -540,6 +542,139 @@ public class Form {
         public void setIndsendtblanketmetadata(Indsendtblanketmetadata indsendtblanketmetadata) {
             this.indsendtblanketmetadata = indsendtblanketmetadata;
         }
+    }
+
+    //nested class insanity ends here
+    //methods for altering begins here
+    //is there a better way for exposing nested class methods
+    //that also works for xml libs?
+
+    public void alterVcvr(long cvr) {
+        this.virksomhedsinformation.setVcvr(cvr);
+    }
+
+    public void alterVnavn(String vnavn) {
+        this.virksomhedsinformation.setVnavn(vnavn);
+    }
+
+    public void alterVaddresse(String vaddresse) {
+        this.virksomhedsinformation.setVadresse(vaddresse);
+    }
+
+    public void alterVtlfnummer(int tlfnummer) {
+        this.virksomhedsinformation.setVtlfnummer(tlfnummer);
+    }
+
+    public void alterVemail(String email) {
+        this.virksomhedsinformation.setVemail(email);
+    }
+
+    public void alterVfax(int fax) {
+        this.virksomhedsinformation.setVfax(fax);
+    }
+
+    public void alterVbranchecode(int code) {
+        this.virksomhedsinformation.setVbranchekode(code);
+    }
+
+    public void alterVtype(String type) {
+        this.virksomhedsinformation.setVtype(type);
+    }
+
+    public void alterAnmelderNavn(String navn) {
+        this.virksomhedsinformation.anmelder.setAnmelderidentitetNavn(navn);
+    }
+
+    public void alterAnmelderCvr(long cvr) {
+        this.virksomhedsinformation.anmelder.setAnmelderidentitetCvr(cvr);
+    }
+
+    public void alterAnmelderRid(long rid) {
+        this.virksomhedsinformation.anmelder.setAnmelderidentitetRid(rid);
+    }
+
+    public void alterIndberedningGrid11Vstoetteordning(String ordning) {
+        this.indberetninger.grid11.setVstoetteordning(ordning);
+    }
+
+    public void alterIndberetningGrid11Vbeloeb(int value) {
+        this.indberetninger.grid11.setVbeloeb(value);
+    }
+
+    public void alterInderetningGrid11Vaar(int year) {
+        this.indberetninger.grid11.setVaar(year);
+    }
+
+    public void alterMetadataFormdataName(String name) {
+        this.metadata.formmetadata.formdata.setName(name);
+    }
+
+    public void alterMetadataFormdataValue(String value) {
+        this.metadata.formmetadata.formdata.setValue(value);
+    }
+
+    public void alterMetadataKvitteringId(String id) {
+        this.metadata.kvitteringsid.setId(id);
+    }
+
+    public void alterMetadataKvitteringName(String name) {
+        this.metadata.kvitteringsid.setName(name);
+    }
+
+    public void alterMetadataKvitteringValue(int value) {
+        this.metadata.kvitteringsid.setKvitteringsid(value);
+    }
+
+    public void alterMetadataTaellerBorgerId(String id) {
+        this.metadata.taellerBorgerID.setId(id);
+    }
+
+    public void alterMetadataTaellerBorgerName(String name) {
+        this.metadata.taellerBorgerID.setName(name);
+    }
+
+
+    public void alterMetadataTaellerIsActive(String id) {
+        this.metadata.taellerIsActive.setId(id);
+    }
+
+    public void alterMetadataTaellerBorgerIsActive(String name) {
+        this.metadata.taellerIsActive.setName(name);
+    }
+
+    public void alterMetadataIndsendtDocId(String value) {
+        this.metadata.indsendtblanketmetadata.indsendtblanket.documentDate.setValue(value);
+    }
+
+    public void alterMetadataIndsendtFormId(String value) {
+        this.metadata.indsendtblanketmetadata.indsendtblanket.documentId.setValue(value);
+    }
+
+    public void alterMetadataIndsendtDocDate(String date) {
+        this.metadata.indsendtblanketmetadata.indsendtblanket.documentDate.setValue(date);
+    }
+
+    public void alterMetadataIndsendtDocTime(String time) {
+        this.metadata.indsendtblanketmetadata.indsendtblanket.documentTime.setValue(time);
+    }
+
+    public void randomizeFields() {
+
+        //be uhh, careful
+        //i guess worst you can always reload the xml
+
+        RandomString randomString = new RandomString();
+
+        this.alterVcvr(ThreadLocalRandom.current().nextLong());
+        this.alterVaddresse(randomString.nextString());
+        this.alterVnavn(randomString.nextString());
+        this.alterVaddresse(randomString.nextString());
+        this.alterVtlfnummer(ThreadLocalRandom.current().nextInt());
+        this.alterVemail(randomString.nextString());
+        this.alterVfax(ThreadLocalRandom.current().nextInt());
+        this.alterVbranchecode(ThreadLocalRandom.current().nextInt());
+        this.alterVtype(randomString.nextString());
+
     }
 }
 

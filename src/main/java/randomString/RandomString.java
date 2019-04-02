@@ -7,6 +7,9 @@ import java.util.Random;
 
 public class RandomString {
 
+    //whatever you do
+    //never ever use this for crypto
+
     public String nextString() {
 
         for (int i = 0; i < buf.length; ++i) {
