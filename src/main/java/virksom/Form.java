@@ -658,6 +658,16 @@ public class Form {
         this.metadata.indsendtblanketmetadata.indsendtblanket.documentTime.setValue(time);
     }
 
+    //this just means less typing below
+    //even if it looks ugly as sin
+    public int randomInt() {
+        return ThreadLocalRandom.current().nextInt();
+    }
+
+    public long randomLong() {
+        return ThreadLocalRandom.current().nextLong();
+    }
+
     public void randomizeFields() {
 
         //be uhh, careful
@@ -665,15 +675,33 @@ public class Form {
 
         RandomString randomString = new RandomString();
 
-        this.alterVcvr(ThreadLocalRandom.current().nextLong());
+        this.alterVcvr(this.randomLong());
         this.alterVaddresse(randomString.nextString());
         this.alterVnavn(randomString.nextString());
         this.alterVaddresse(randomString.nextString());
-        this.alterVtlfnummer(ThreadLocalRandom.current().nextInt());
+        this.alterVtlfnummer(this.randomInt());
         this.alterVemail(randomString.nextString());
-        this.alterVfax(ThreadLocalRandom.current().nextInt());
-        this.alterVbranchecode(ThreadLocalRandom.current().nextInt());
+        this.alterVfax(this.randomInt());
+        this.alterVbranchecode(this.randomInt());
         this.alterVtype(randomString.nextString());
+
+        this.alterAnmelderNavn(randomString.nextString());
+        this.alterAnmelderCvr(this.randomLong());
+        this.alterAnmelderRid(this.randomLong());
+
+        this.alterIndberedningGrid11Vstoetteordning(randomString.nextString());
+        this.alterIndberetningGrid11Vbeloeb(this.randomInt());
+        this.alterInderetningGrid11Vaar(this.randomInt());
+
+        this.alterMetadataFormdataName(randomString.nextString());
+        this.alterMetadataFormdataValue(randomString.nextString());
+        this.alterMetadataKvitteringId(randomString.nextString());
+        this.alterMetadataKvitteringName(randomString.nextString());
+        this.alterMetadataKvitteringValue(randomInt());
+        this.alterMetadataIndsendtDocId(randomString.nextString());
+        this.alterMetadataIndsendtFormId(randomString.nextString());
+        this.alterMetadataIndsendtDocDate(randomString.nextString());
+        this.alterMetadataIndsendtDocTime(randomString.nextString());
 
     }
 }
