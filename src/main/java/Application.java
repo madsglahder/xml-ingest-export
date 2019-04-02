@@ -12,8 +12,11 @@ public class Application {
 
         RandomString randomString = new RandomString();
 
-        System.out.println(form.getIndberetninger().getGrid11().getControl80());
+        System.out.println("Control application is running");
         System.out.println(randomString.nextString());
+
+        form.randomizeFields();
+
 
     }
 
