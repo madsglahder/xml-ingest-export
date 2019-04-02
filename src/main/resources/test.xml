@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <Virksomhedsinformation>
+    <vcvr>98999292976</vcvr>
+    <vnavn>CompanyName</vnavn>
+    <vadresse>PlaceName 1215, Postal code 5421 CityName</vadresse>
+    <vtlfnummer>555123456</vtlfnummer>
+    <vemail>mail@server.toplevelDomain</vemail>
+    <vfax>555123457</vfax>
+    <vbranchekode>55667788</vbranchekode>
+    <vtype>large</vtype>
+    <Anmelder>
+      <anmelderidentitet-navn>firstname lastname</anmelderidentitet-navn>
+      <anmelderidentitet-cvr>123456</anmelderidentitet-cvr>
+      <anmelderidentitet-rid>1176587654312</anmelderidentitet-rid>
+    </Anmelder>
+  </Virksomhedsinformation>
+  <Indberetninger>
+    <grid-11>
+      <vstoetteordning>G4_identifier</vstoetteordning>
+      <vbeloeb>123456</vbeloeb>
+      <vaar>2007</vaar>
+      <control-80>31/12/2007</control-80>
+    </grid-11>
+  </Indberetninger>
+  <metadata>
+    <formmetadata>
+      <formdata name="taellerDiaID" value=""/>
+    </formmetadata>
+    <kvitteringsid id="feltkvitteringsblanket" name="feltkvitteringsblanket">411</kvitteringsid>
+    <taellerBorgerID id="taellerBorgerID" name="taellerBorgerID"/>
+    <taellerIsActive id="taellerIsActive" name="taellerIsActive"/>
+    <indsendtblanketmetadata>
+      <indsendtblanket>
+        <document_id value="68607984964597bdfa57a0b799e68c12990766e7c4"/>
+        <indsendt_blanket_id value="65235"/>
+        <document_date value="2007-09-01"/>
+        <document_time value="10:10:03"/>
+      </indsendtblanket>
+    </indsendtblanketmetadata>
+  </metadata>
+</form>
