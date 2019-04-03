@@ -1,0 +1,41 @@
+<form>
+   <Virksomhedsinformation>
+      <vcvr>7822543634908755017</vcvr>
+      <vnavn>n5ZcAWlul41ybx8a7xFRW</vnavn>
+      <vadresse>zv0YWI5Q5LGh3ZezPAUYQ</vadresse>
+      <vtlfnummer>1652272484</vtlfnummer>
+      <vemail>0JOD7PgPxhq4osU2AGO0w</vemail>
+      <vfax>-2117941581</vfax>
+      <vbranchekode>-1285391699</vbranchekode>
+      <vtype>L0T3EAgIaKSArh34nD4NV</vtype>
+      <Anmelder>
+         <anmelderidentitet-navn>wgxUhRxRGfTAfH4tn21kV</anmelderidentitet-navn>
+         <anmelderidentitet-cvr>2117823636173950627</anmelderidentitet-cvr>
+         <anmelderidentitet-rid>-1960539409635589685</anmelderidentitet-rid>
+      </Anmelder>
+   </Virksomhedsinformation>
+   <Indberetninger>
+      <grid-11>
+         <vstoetteordning>sACqQz9HoquO7Qvs2jdmT</vstoetteordning>
+         <vbeloeb>-648621366</vbeloeb>
+         <vaar>-908138994</vaar>
+         <control-80>31/12/2007</control-80>
+      </grid-11>
+   </Indberetninger>
+   <metadata>
+      <formmetadata>
+         <formdata name="VaUS9GZuOPs9SKqNgxPh9" value="36xR3xlVhiH0JRL3cwwqg"/>
+      </formmetadata>
+      <kvitteringsid id="KnlzfjCXUJTpzQr3mtOFa" name="GA5PtoGwvytKulYFj940R"/>
+      <taellerBorgerID id="BYJSfkUlMbZrUSKVeaRPa" name="oa1idROTZPf4YsuNarHMp"/>
+      <taellerIsActive id="855BonG2rALjCDinjKUYV" name="FCYg9GTsPHQBAa1DqRZvS"/>
+      <indsendtblanketmetadata>
+         <indsendtblanket>
+            <document_id value="BDZ8HzSHzYkZ9fWchRTB9"/>
+            <indsendt_blanket_id value="-1962480354"/>
+            <document_date value="RDHW0eeqsykjUZyN8LrF2"/>
+            <document_time value="zlzBnJZJLqhgdD8AUC8id"/>
+         </indsendtblanket>
+      </indsendtblanketmetadata>
+   </metadata>
+</form>

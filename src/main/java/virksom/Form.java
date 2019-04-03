@@ -666,6 +666,10 @@ public class Form {
         this.metadata.indsendtblanketmetadata.indsendtblanket.indsendtBlanketId.setValue(value);
     }
 
+    public void alterIndberetningerGrid11Control80(String date) {
+
+    }
+
     //this just means less typing below
     //even if it looks ugly as sin
     public int randomInt() {
