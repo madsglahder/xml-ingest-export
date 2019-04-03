@@ -16,6 +16,10 @@ public class Form {
     //have it side by side when looking at this
     //or risk going insane
 
+    //after adding even more I want to say I'm sorry
+    //sorry you have to look at this
+    //sorry you have to work with xml
+
     @Element(name="Virksomhedsinformation")
     private Virksomhedsinformation virksomhedsinformation;
 
@@ -658,6 +662,10 @@ public class Form {
         this.metadata.indsendtblanketmetadata.indsendtblanket.documentTime.setValue(time);
     }
 
+    public void alterMetadataIndsendtblanketetIndsendtBlanketId(int value) {
+        this.metadata.indsendtblanketmetadata.indsendtblanket.indsendtBlanketId.setValue(value);
+    }
+
     //this just means less typing below
     //even if it looks ugly as sin
     public int randomInt() {
@@ -702,7 +710,12 @@ public class Form {
         this.alterMetadataIndsendtFormId(randomString.nextString());
         this.alterMetadataIndsendtDocDate(randomString.nextString());
         this.alterMetadataIndsendtDocTime(randomString.nextString());
+        this.alterMetadataIndsendtblanketetIndsendtBlanketId(randomInt());
 
+        this.alterMetadataTaellerBorgerId(randomString.nextString());
+        this.alterMetadataTaellerBorgerName(randomString.nextString());
+        this.alterMetadataTaellerBorgerIsActive(randomString.nextString());
+        this.alterMetadataTaellerIsActive(randomString.nextString());
     }
 }
 

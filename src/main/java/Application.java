@@ -1,6 +1,7 @@
 import randomString.RandomString;
 import virksom.Deserializer;
 import virksom.Form;
+import virksom.SerializerForm;
 
 public class Application {
 
@@ -13,11 +14,11 @@ public class Application {
         RandomString randomString = new RandomString();
 
         System.out.println("Control application is running");
-        System.out.println(randomString.nextString());
 
         form.randomizeFields();
 
-
+        SerializerForm serializerForm = new SerializerForm();
+        serializerForm.formToFile(form, "src/main/resources/", "alteredTest.xml");
     }
 
 }
