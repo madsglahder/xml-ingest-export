@@ -720,6 +720,7 @@ public class Form {
         this.alterMetadataTaellerBorgerName(randomString.nextString());
         this.alterMetadataTaellerBorgerIsActive(randomString.nextString());
         this.alterMetadataTaellerIsActive(randomString.nextString());
+
     }
 }
 
